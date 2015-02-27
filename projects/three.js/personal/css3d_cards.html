@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <title>three.js css3d - カード</title>
+    <style>
+        * {
+            /* Prevent any object from being highlighted upon touch event*/
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+            /* Prevent the callout when you touch something */
+            -webkit-touch-callout: none;
+        }
+
+        html, body {
+            height: 100%;
+            min-height: 1100px;
+            font-family: 'ヒラギノ角ゴ ProN W6', 'HiraKakuProN-W6', 'Hiragino Kaku Gothic ProN', 'Droid Sans', 'Droid Sans Japanese', 'Helvetica Neue';
+        }
+
+        body {
+            background-color: #000;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .element {
+            width: 220px;
+            height: 294px;
+            box-shadow: 0px 0px 20px rgba(255, 0, 0, 0.5);
+            border: 2px solid rgba(255, 127, 127, 0.25);
+            cursor: default;
+        }
+
+        .element:hover {
+            box-shadow: 0px 0px 20px rgba(255, 0, 0, 0.75);
+            border: 1px solid rgba(255, 127, 127, 0.75);
+        }
+
+        a {
+            color: #ffffff;
+        }
+
+        #menu {
+            -webkit-backface-visibility: hidden;
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+        }
+
+        button {
+            -webkit-backface-visibility: hidden;
+            font-family: 'ヒラギノ角ゴ ProN W6', 'HiraKakuProN-W6', 'Hiragino Kaku Gothic ProN', 'Droid Sans', 'Droid Sans Japanese', 'Helvetica Neue';
+            color: rgba(255, 255, 255, 1);
+            font-weight: bold;
+            font-size: 18px;
+            border: 0;
+            padding: 5px 10px;
+            cursor: pointer;
+            width: 71px;
+            height: 44px;
+            opacity: 0.5;
+            background: url(textures/ui/mainBlackButtonSmall@2x.png) no-repeat;
+            background-size: 100% 100%;
+        }
+
+        button:hover {
+            opacity: 0.7;
+            background-image: url(textures/ui/mainVioletButtonSmall@2x.png);
+        }
+    </style>
+</head>
+<body>
+<script src="../build/three.min.js"></script>
+<script src="../examples/js/libs/tween.min.js"></script>
+<script src="../examples/js/controls/TrackballControls.js"></script>
+<script src="../examples/js/renderers/CSS3DRenderer.js"></script>
+
+
+<div id="container"></div>
+
+<div id="menu">
+    <button id="table">■</button>
+    <button id="sphere">●</button>
+    <button id="helix">⦿</button>
+    <button id="grid">〓</button>
+</div>
+
+<script src="js/utils.js"></script>
+<script src="js/3dcards.js"></script>
+
+
+</body>
+</html>
